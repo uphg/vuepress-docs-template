@@ -164,17 +164,17 @@ export default {
     },
 
     initScrollTo() {
-      this.scrollbar.style.scrollBehavior = 'auto'
+      this.closeBehavior()
       this.scrollTo(location.hash)
-      this.$nextTick(() => {
-        this.scrollbar.style.scrollBehavior = ''
-      })
+      this.$nextTick(this.openBehavior)
     },
 
     // 修复页面不会自动跳转锚点的 bug
     scrollTo(selector) {
       if (!selector || selector === '#') {
+        this.closeBehavior()
         this.scrollbar.scrollTo(0, 0)
+        this.$nextTick(this.openBehavior)
         return
       }
       const el = document.querySelector(decodeURIComponent(selector))
@@ -182,6 +182,14 @@ export default {
         this.scrollbar.scrollTo(0, el.offsetTop)
       }
     },
+
+    closeBehavior() {
+      this.scrollbar.style.scrollBehavior = 'auto'
+    },
+
+    openBehavior() {
+      this.scrollbar.style.scrollBehavior = ''
+    }
   }
 }
 </script>
