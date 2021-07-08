@@ -188,7 +188,7 @@ export default {
     },
 
     openBehavior() {
-      this.scrollbar.style.scrollBehavior = ''
+      this.scrollbar.style.scrollBehavior = 'smooth'
     }
   }
 }

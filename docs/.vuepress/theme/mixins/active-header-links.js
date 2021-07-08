@@ -62,7 +62,7 @@ export default {
             this.$nextTick(() => {
               // 修复修改 url 锚点后自动跳转的的问题
               this.scrollbar.scrollTo(0, oldScrollTop)
-              this.scrollbar.style.scrollBehavior = ''
+              this.scrollbar.style.scrollBehavior = 'smooth'
               // this.$vuepress.$set('disableScrollBehavior', false)
             })
           })

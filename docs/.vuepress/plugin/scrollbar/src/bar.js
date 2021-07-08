@@ -46,7 +46,7 @@ export default {
 
     // 打开平滑滚动
     openBehavior() {
-      this.wrap.style.scrollBehavior = ''
+      this.wrap.style.scrollBehavior = 'smooth'
     },
 
     clickThumbHandler(e) {
