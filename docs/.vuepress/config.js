@@ -18,7 +18,7 @@ module.exports = {
     sidebar,
   },
   plugins: [
-    [
+    /* [
       'vuepress-plugin-medium-zoom',
       {
         selector: '.page img',
@@ -29,7 +29,7 @@ module.exports = {
           scrollOffset: 0,
         },
       },
-    ],
+    ], */
     [
       '@vuepress/pwa',
       {

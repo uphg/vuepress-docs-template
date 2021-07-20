@@ -52,11 +52,12 @@ import Page from '@theme/components/Page.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
 import { resolveSidebarItems } from '../util'
 import activeHeaderLinks from '../mixins/active-header-links'
+import mediumZoom from '../mixins/medium-zoom/index'
 
 export default {
   name: 'Layout',
 
-  mixins: [activeHeaderLinks],
+  mixins: [activeHeaderLinks, mediumZoom],
 
   components: {
     Home,

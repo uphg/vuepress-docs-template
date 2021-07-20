@@ -19,3 +19,5 @@ yarn add -D vuepress
 ```sh
 npm install -D vuepress
 ```
+
+<img :src="$withBase('/hero.png')" alt="ndoe">
