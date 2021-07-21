@@ -2,7 +2,7 @@
   <main class="page">
     <slot name="top" />
     <PageTop />
-
+    <PageIndex />
     <Content class="theme-default-content" />
     <PageEdit />
 
@@ -14,11 +14,12 @@
 
 <script>
 import PageTop from '@theme/components/PageTop.vue'
+import PageIndex from '@theme/components/toc/PageIndex.vue'
 import PageEdit from '@theme/components/PageEdit.vue'
 import PageNav from '@theme/components/PageNav.vue'
 
 export default {
-  components: { PageTop, PageEdit, PageNav },
+  components: { PageTop, PageIndex, PageEdit, PageNav },
   props: ['sidebarItems']
 }
 </script>

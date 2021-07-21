@@ -33,8 +33,12 @@ module.exports = {
 }
 ```
 
-并且需要对应修改 `.vuepress/styles/index.styl` 中的 `$iconUrl` 的路径为
+并且需要对应修改 `.vuepress/theme/styles/custom-blocks.styl` 中的 `$iconUrl` 的路径为
 
 ```stylus
 $iconUrl = '/vuepress-docs-template'
 ```
+
+## bug
+
+- 图片在最底部时锚点定位错误的bug（未修复）

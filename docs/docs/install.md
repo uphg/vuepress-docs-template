@@ -21,3 +21,20 @@ npm install -D vuepress
 ```
 
 <img :src="$withBase('/hero.png')" alt="ndoe">
+
+<!-- 1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+6
+
+7
+ -->

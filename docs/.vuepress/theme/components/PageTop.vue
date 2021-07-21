@@ -37,29 +37,24 @@ export default {
 </script>
 <style lang="stylus">
 $paddingTop = 2.2rem
-$paddingBottom = 0
-.re-page-top {
-  padding: $paddingTop 40px $paddingBottom;
-  max-width: $contentWidth;
-  margin: 0 auto -24px;
-  h2.title {
-    margin: 0;
+.re-page-top
+  padding $paddingTop 40px 0
+  max-width $contentWidth
+  margin 0 auto
+  h2.title
+    margin 0
     font-size 2.2rem
+    padding-top 0
     padding-bottom 0
     border-bottom none 
-}
-}
 
-@media (max-width: $MQNarrow) {
-  .re-page-top {
-    padding: $paddingTop 32px $paddingBottom;
-  }
-}
+@media (max-width: $MQNarrow)
+  .re-page-top
+    padding 2rem 32px 0
 
 // wide mobile
-@media (max-width: $MQMobile) {
-  .re-page-top {
-    padding: $paddingTop 24px $paddingBottom;
-  }
-}
+@media (max-width: $MQMobile)
+  .re-page-top
+    padding 1.5rem 24px 0
+
 </style>
