@@ -9,9 +9,8 @@
 </template>
 <style lang="stylus">
 .arrow-right {
-  margin-right: 5px;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   transition: transform 0.16s ease-out;
 
   &.is-down {

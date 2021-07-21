@@ -116,6 +116,7 @@ $pageArrowSize = 10px
 
   .page-index-icon {
     margin-top: 1px;
+    margin-right: 5px;
     width: $pageArrowSize;
     height: $pageArrowSize;
     fill: currentColor;

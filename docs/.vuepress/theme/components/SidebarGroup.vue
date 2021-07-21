@@ -121,6 +121,8 @@ export default {
       border-left none
 
 .sidebar-heading
+  display flex
+  align-items center
   color $textColor
   transition color .15s ease
   cursor pointer
@@ -153,5 +155,6 @@ export default {
 
 .sidebar-icon
   fill #cccccc
+  margin-left 10px
 
 </style>
