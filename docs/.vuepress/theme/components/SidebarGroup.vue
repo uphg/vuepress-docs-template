@@ -20,11 +20,16 @@
       @click.native="$emit('toggle')"
     >
       <span>{{ item.title }}</span>
-      <span
+      <arrow-right
+        v-if="collapsable"
+        class="page-index-icon arrow-right"
+        :class="{ 'is-down': open }"
+      />
+      <!-- <span
         v-if="collapsable"
         class="arrow"
         :class="open ? 'down' : 'right'"
-      />
+      /> -->
     </RouterLink>
 
     <p
@@ -34,11 +39,16 @@
       @click="$emit('toggle')"
     >
       <span>{{ item.title }}</span>
-      <span
+      <arrow-right
+        v-if="collapsable"
+        class="sidebar-icon arrow-right"
+        :class="{ 'is-down': open }"
+      />
+      <!-- <span
         v-if="collapsable"
         class="arrow"
         :class="open ? 'down' : 'right'"
-      />
+      /> -->
     </p>
 
     <DropdownTransition>
@@ -55,6 +65,7 @@
 </template>
 
 <script>
+import ArrowRight from './icon/ArrowRight.vue' 
 import { isActive } from '../util'
 import DropdownTransition from '@theme/components/DropdownTransition.vue'
 
@@ -62,6 +73,7 @@ export default {
   name: 'SidebarGroup',
 
   components: {
+    ArrowRight,
     DropdownTransition
   },
 
@@ -138,4 +150,8 @@ export default {
   transition height .1s ease-out
   font-size 0.95em
   overflow hidden
+
+.sidebar-icon
+  fill #cccccc
+
 </style>

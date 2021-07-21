@@ -2,15 +2,10 @@
   <div class="page-index" :class="{'hide-index': indexState}" v-if="showCatalog || inTouch">
     <div class="page-index-title" @click="clickIndex()">
       <span class="open-catalog" :class="{ active: showIndex }">
-        <svg
+        <arrow-right
           class="page-index-icon arrow-right"
           :class="{ 'is-down': showIndex }"
-          aria-hidden="true"
-          id="icon-arrow-right"
-          viewBox="0 0 1024 1024"
-        >
-          <path d="M797.21457646 444.0233542C639.18078066 323.41640029 481.14698487 202.80944727 323.13223847 82.18344394 266.85068662 39.24639688 185.76131065 79.36563623 185.76131065 150.16009062v723.67823145c0 70.7944544 81.08937597 110.91528018 137.37092782 67.95918369 158.01474638-120.60854033 316.04854219-241.21390605 474.08233799-361.83832207 44.83410644-34.21851065 44.83410644-101.69985674 0-135.93582949z"></path>
-        </svg>
+        />
         <span class="text">{{ indexText }}</span>
       </span>
     </div>
@@ -24,9 +19,10 @@
   </div>
 </template>
 <script>
+import ArrowRight from '../icon/ArrowRight.vue' 
 import TOC from './components/TableOfContents'
 export default {
-  components: { TOC },
+  components: { ArrowRight, TOC },
   data() {
     return {
       showIndex: false,
@@ -123,17 +119,6 @@ $pageArrowSize = 10px
     width: $pageArrowSize;
     height: $pageArrowSize;
     fill: currentColor;
-  }
-}
-
-.arrow-right {
-  margin-right: 5px;
-  width: 10px;
-  height: 10px;
-  transition: transform 0.16s ease-out;
-
-  &.is-down {
-    transform: rotate(90deg);
   }
 }
 
