@@ -11,6 +11,12 @@ export default {
     move: Number
   },
 
+  data() {
+    return {
+      cursorDown: false
+    }
+  },
+
   computed: {
     bar() {
       return BAR_MAP[this.vertical ? 'vertical' : 'horizontal'];
@@ -30,7 +36,7 @@ export default {
         onMousedown={ this.clickTrackHandler } >
         <div
           ref="thumb"
-          class="tulp-scrollbar__thumb"
+          class={ ['tulp-scrollbar__thumb', { active: this.cursorDown }] }
           onMousedown={ this.clickThumbHandler }
           style={ renderThumbStyle({ size, move, bar }) }>
         </div>
